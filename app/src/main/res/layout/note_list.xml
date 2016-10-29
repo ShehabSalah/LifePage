@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/note_list_view" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/notes_empty"
+        android:textSize="24sp"
+        android:fontFamily="serif"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:text="@string/note_empty_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>

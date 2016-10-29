@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Life Page</string>
+    <string name="action_image">Add Image</string>
+    <string name="action_tone">Add Note Ring Tone</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="email_hint">E-Mail</string>
+    <string name="signup_email_hint">Enter E-Mail</string>
+    <string name="password_hint">Password</string>
+    <string name="signup_passowrd">Enter Password</string>
+    <string name="re_password_hint">Re-Enter Password</string>
+    <string name="login_button">Log In</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="title_activity_note">NoteActivity</string>
+    <string name="note_empty_hint">Notes you add appear here</string>
+    <string name="note_title">Notes</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="new_note_title">Title</string>
+    <string name="new_note_page_title">New Note</string>
+    <string name="edit_note_title">Edit Note</string>
+    <string name="new_note_content">Note</string>
+    <string name="email_validation_message">Please enter a valid E-mail.</string>
+    <string name="password_validation_message">Please enter a valid password. Password must be more than 5 numbers or characters.</string>
+    <string name="password_matcher">Password does not match the confirm password.</string>
+    <string name="user_exists">This e-mail is already exists, Please Log In.</string>
+    <string name="user_not_exists">This e-mail is not exists, Please Sign Up.</string>
+    <string name="note_time">You can not pick a previous time</string>
+    <string name="no_connection">There is no internet connection, connect to the internet and try again.</string>
+    <string name="content_authority">com.platformhouse.lifepage</string>
+
+    <string name="title_activity_alarm_receiver">AlarmReceiverActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="dialog_message">Are you sure you want to delete this note?</string>
+    <string name="dialog_title">Delete</string>
+    <string name="ok">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="sync_account_type">com.platformhouse.lifepage</string>
+    <string name="cancel_alarm_button">X</string>
+    <string name="alarm_image_description">Alarm Image</string>
+    <string name="insert_image_note">Insert Image Note</string>
+    <string name="pick_time">Pick a time</string>
+    <string name="pick_date">Pick a date</string>
+    <string name="ring_tone">Ring Tone</string>
+    <string name="note_image">Note Image</string>
+    <string name="clock_logo">Alarm clock Logo</string>
+    <string name="calender_logo">Alarm Calender Logo</string>
+
+    <string name="date_empty_validation">Please pick a date or remove the alarm time.</string>
+    <string name="time_empty_validation">Please pick time or remove the alarm date.</string>
+
+    <string name="note_title_validation">Title must be more than 2 characters or numbers.</string>
+</resources>
