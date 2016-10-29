@@ -277,6 +277,7 @@ public class NewNoteActivity extends AppCompatActivity {
                                     noteID, my_intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                             am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
+                            am.cancel(pendingIntent);
 
                         }
                         if (!enyError)

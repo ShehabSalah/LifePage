@@ -1,10 +1,13 @@
 package com.platformhouse.lifepage.ui.fragments;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.app.PendingIntent;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -23,6 +26,7 @@ import android.widget.TextView;
 import com.platformhouse.lifepage.R;
 import com.platformhouse.lifepage.data.note.NoteColumnHolder;
 import com.platformhouse.lifepage.data.note.NoteColumns;
+import com.platformhouse.lifepage.services.AlarmReceiver;
 import com.platformhouse.lifepage.ui.adapters.NoteAdapter;
 import com.platformhouse.lifepage.util.Constants;
 import com.platformhouse.lifepage.util.NoteObserver;
@@ -155,6 +159,11 @@ public class NoteFragment extends Fragment implements LoaderManager.LoaderCallba
                 NoteColumnHolder noteColumnHolder = (NoteColumnHolder) list.get(position);
                 getActivity().getContentResolver().delete(NoteColumns.CONTENT_URI,
                         NoteColumns._ID + " = ?",new String[]{Integer.toString(noteColumnHolder.getNote_id())});
+                Intent my_intent = new Intent(getActivity(), AlarmReceiver.class);
+                AlarmManager am = (AlarmManager) getActivity().getSystemService(getActivity().ALARM_SERVICE);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(),
+                        position, my_intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                am.cancel(pendingIntent);
                 getLoaderManager().restartLoader(Constants.NOTE_LOADER, null, NoteFragment.this);
             }
         });
